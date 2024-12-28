@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: store-purchases
+          uri: lb://store-purchases
+          predicates:
+            - Path=/api/purchases/**

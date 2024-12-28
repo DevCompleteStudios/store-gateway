@@ -1,4 +1,4 @@
-package com.devstudios.store.app.gateway.store_gateway;
+package com.devstudios.store.app.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
