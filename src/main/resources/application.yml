@@ -1,8 +1,21 @@
+server:
+  port: 8080
+
+
 spring:
   cloud:
     gateway:
       routes:
-        - id: store-purchases
-          uri: lb://store-purchases
+        - id: store-products
+          uri: lb://store-products
           predicates:
-            - Path=/api/purchases/**
+            - Path=/api/products/**
+          filters:
+            - StripPrefix=2
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
